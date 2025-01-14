@@ -2,7 +2,8 @@ const { writeFileSync } = require('fs')
 const { resolve } = require('path')
 const dotenv = require('dotenv')
 
-dotenv.config()
+// Carrega as variáveis do arquivo .env
+dotenv.config();
 
 const environment = {
   production: process.env['NODE_ENV'] === 'production',
@@ -12,7 +13,9 @@ const environment = {
 }
 
 const filePath = resolve(__dirname, './src/app/environments/environment.ts')
-const environmentFileContent = `export const environment = ${JSON.stringify(environment, null, 2)}`
-writeFileSync(filePath, environmentFileContent, 'utf-8')
+
+const environmentFileContent = `export const environment = ${JSON.stringify(environment, null, 2)};`
+
+writeFileSync(filePath, environmentFileContent, 'utf-8');
 
 console.log(`Arquivo de ambiente gerado: ${filePath}`)
