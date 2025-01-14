@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "set-env": "node set-env.ts",
+    "start": "npm run set-env && ng serve",
+    "build": "npm run set-env && ng build",
     "serve:ssr:marvel-crud": "node dist/marvel-crud/server/server.mjs"
   },
   "private": true,
@@ -22,6 +23,7 @@
     "@angular/router": "^19.0.0",
     "@angular/ssr": "^19.0.7",
     "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.7",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

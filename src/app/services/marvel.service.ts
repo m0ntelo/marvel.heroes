@@ -12,7 +12,7 @@ import { environment } from '@environments/environment';
   providedIn: 'root',
 })
 export class MarvelService {
-  private readonly baseUrl = 'https://gateway.marvel.com/v1/public/'
+  private readonly baseUrl = environment.API_URL
   private readonly publicKey = environment.MARVEL_PUBLIC_KEY
   private readonly privateKey = environment.MARVEL_PRIVATE_KEY
 
