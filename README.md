@@ -1,59 +1,133 @@
-# MarvelCrud
+# Marvel Heroes Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+Welcome to the **Marvel Heroes Application**, an Angular 19 project that provides information about your favorite Marvel characters. The application integrates with a Marvel API to fetch character details, display them in a dynamic list, and manage their data.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Display a list of Marvel characters.
+- Infinite scrolling to load more characters dynamically.
+- View detailed character information.
+- Edit character details.
+- Delete characters from the list.
+- Responsive design (desktop-focused).
+
+## Technologies Used
+
+- **Angular 19**: Frontend framework.
+- **TypeScript**: Language for building the application.
+- **RxJS**: Handling asynchronous data streams.
+- **SCSS**: Styling the application.
+- **Marvel API**: Source of character data.
+
+## Prerequisites
+
+- **Node.js**: Version 16 or later.
+- **Angular CLI**: Version 15 or later.
+- Marvel Developer API Key (https://developer.marvel.com/).
+
+## Getting Started
+
+Follow these steps to set up and run the application locally:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/m0ntelo/marvel-heroes.git
+cd marvel-heroes
+```
+
+### 2. Install Dependencies
+
+Install the necessary dependencies using npm:
+
+```bash
+npm install
+```
+
+### 3. Configure the Marvel API
+
+Create a `.env` file in the root directory and add your Marvel API credentials:
+
+```env
+MARVEL_PUBLIC_KEY=your_public_key
+MARVEL_PRIVATE_KEY=your_private_key
+```
+
+### 4. Start the Development Server
+
+Run the following command to start the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Access the application at `http://localhost:4200` in your web browser.
 
-## Code scaffolding
+## Project Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```plaintext
+src/
+├── app/
+│   ├── components/      # Reusable components
+│   ├── pages/           # Application pages (e.g., character list, edit page)
+│   ├── services/        # API interaction logic
+│   ├── state/           # Application state management
+│   └── app.module.ts    # Main application module
+├── assets/              # Static assets
+├── environments/        # Environment configurations
+└── styles/              # Global styles
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Scripts
+
+### Development
 
 ```bash
-ng generate --help
+ng serve
 ```
 
-## Building
+### Build
 
-To build the project run:
+Build the application for production:
 
 ```bash
-ng build
+ng build --prod
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Linting
 
-## Running unit tests
+Run linting to check for code quality issues:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+```bash
+ng lint
+```
+
+### Testing
+
+Run unit tests:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Contribution Guidelines
 
-For end-to-end (e2e) testing, run:
+1. Fork the repository.
+2. Create a new feature branch.
+3. Commit your changes.
+4. Push to your forked repository.
+5. Submit a pull request.
 
-```bash
-ng e2e
-```
+## License
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+This project is licensed under the MIT License.
 
-## Additional Resources
+## Acknowledgments
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Marvel API](https://developer.marvel.com/) for character data.
+- Angular Team for the framework.
+
+---
+
+Feel free to reach out with any questions or suggestions!
+

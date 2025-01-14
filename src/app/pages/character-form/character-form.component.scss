@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap');
+
+.character__edit {
+  width: 400px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 28px;
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+  }
+
+  label {
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:first-child {
+      margin-right: 5px;
+    }
+
+    &.save {
+      background-color: #28a745;
+      color: #fff;
+
+      &:hover {
+        background-color: #218838;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.cancel {
+      background-color: #dc3545;
+      color: #fff;
+
+      &:hover {
+        background-color: #c82333;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

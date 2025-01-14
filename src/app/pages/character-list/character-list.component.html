@@ -1,0 +1,37 @@
+<div class="characters">
+  @for (character of marvelState.allCharacters(); track character; let idx = $index) {
+    <div class="characters__card">
+      <img
+        [src]="getUrl(character)"
+        [alt]="character.name"
+        class="characters__card__image"
+      />
+      <div class="characters__card__info">
+        <h3>{{ character.name }}</h3>
+        <p>{{ getDescription(character.description) }}</p>
+      </div>
+      <div class="characters__card__action">
+        <button 
+          class="edit" 
+          (click)="goToEdit(character)">
+          Editar
+        </button>
+        <button 
+          class="delete" 
+          (click)="goToRemove(character)">
+          Deletar
+        </button>
+      </div>
+    </div>
+  }
+
+  @if(loading) {
+    <div 
+      class="loading">
+      <p>Carregando...</p>
+    </div>
+  }
+</div>
+
+
+

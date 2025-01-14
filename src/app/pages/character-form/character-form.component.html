@@ -1,0 +1,30 @@
+<div class="character__edit">
+  <h2>Editar Personagem</h2>
+  <div>
+    <label>Nome:</label>
+    <input 
+      [(ngModel)]="character.name" 
+      placeholder="Nome" />
+  </div>
+  <div>
+    <label>Descrição:</label>
+    <textarea 
+      [(ngModel)]="character.description" 
+      placeholder="Descrição">
+    </textarea>
+  </div>
+  <div>
+    <button 
+      class="save" 
+      (click)="goToSave()">
+      Salvar
+    </button>
+    <button 
+      class="cancel" 
+      (click)="goToCancel()">
+      Cancelar
+    </button>
+  </div>
+</div>
+
+
