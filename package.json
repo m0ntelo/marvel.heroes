@@ -7,7 +7,7 @@
     "test": "ng test",
     "set-env": "node set-env.ts",
     "start": "npm run set-env && ng serve",
-    "build": "npm run set-env && ng build",
+    "build": "npm run set-env && ng build --configuration production",
     "serve:ssr:marvel-crud": "node dist/marvel-crud/server/server.mjs"
   },
   "private": true,
